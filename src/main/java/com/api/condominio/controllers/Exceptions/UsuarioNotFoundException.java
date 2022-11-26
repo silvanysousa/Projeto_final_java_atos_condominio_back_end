@@ -1,4 +1,4 @@
-package com.api.condominio.controllers;
+package com.api.condominio.controllers.Exceptions;
 
 public class UsuarioNotFoundException extends RuntimeException {
 
