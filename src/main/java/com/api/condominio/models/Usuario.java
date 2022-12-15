@@ -13,6 +13,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
 import javax.persistence.*;
 
 @Entity
@@ -24,11 +25,30 @@ public class Usuario implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;	
-	private String nome;	
+	
+	@NotBlank(message = "Campo obrigatorio")
+	@Column(nullable = false)
+	private String nome;
+	
+	@NotBlank(message = "Campo obrigatorio")
+	@Column(nullable = false, unique = true)
 	private String cpf;	
-	private String telefone;	
+	
+	@NotBlank(message = "Campo obrigatorio")
+	@Column(nullable = false)
+	private String telefone;
+	
+	@NotBlank(message = "Campo obrigatorio")
+	@Column(nullable = false)
 	private String bloco;	
+	
+	@NotBlank(message = "Campo obrigatorio")
+	@Column(nullable = false)
 	private String apartamento;
+	
+	@NotBlank(message = "Campo obrigatorio")
+	@Column(nullable = false)
+	private String senha;
 
 	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(name = "tb_usuario_reserva",
@@ -38,13 +58,14 @@ public class Usuario implements Serializable {
 
 	public Usuario(){}
 
-	public Usuario(Long id, String nome, String cpf, String telefone, String bloco, String apartamento) {
+	public Usuario(Long id, String nome, String cpf, String telefone, String bloco, String apartamento, String senha) {
 		this.id = id;
 		this.nome = nome;
 		this.cpf = cpf;
 		this.telefone = telefone;
 		this.bloco = bloco;
 		this.apartamento = apartamento;
+		this.senha = senha;
 	}
 
 	public List<Reserva> getReservas() {
@@ -106,6 +127,14 @@ public class Usuario implements Serializable {
 	public void setApartamento(String apartamento) {
 		this.apartamento = apartamento;
 	}
+	
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
 
 	@Override
 	public boolean equals(Object o) {
@@ -119,4 +148,5 @@ public class Usuario implements Serializable {
 	public int hashCode() {
 		return Objects.hash(id);
 	}
+	
 }

@@ -6,6 +6,7 @@ import java.util.Objects;
 
 
 @Entity
+@Table(name = "funcionario")
 public class Funcionario implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -13,22 +14,29 @@ public class Funcionario implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(nullable = true, unique = true)
     private String nome;
-    private String cargo;
+    @Column(nullable = true, unique = true)
+    private String cpf;
+    @Column(nullable = true)
+    private String cargo;    
     @OneToOne
     private Empresa empresa;
+    private String senha;
 
     public Funcionario() {
     }
 
-    public Funcionario(Long id, String nome, String cargo, Empresa empresa) {
+    public Funcionario(Long id, String nome, String cpf, String cargo, Empresa empresa, String senha) {
         this.id = id;
         this.nome = nome;
+        this.cpf = cpf;
         this.cargo = cargo;
         this.empresa = empresa;
+        this.senha = senha;
     }
-
-    public Long getId() {
+    
+	public Long getId() {
         return id;
     }
 
@@ -43,6 +51,14 @@ public class Funcionario implements Serializable {
     public void setNome(String nome) {
         this.nome = nome;
     }
+    
+    public String getCpf() {
+		return cpf;
+	}
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
 
     public String getCargo() {
         return cargo;
@@ -59,6 +75,14 @@ public class Funcionario implements Serializable {
     public void setEmpresa(Empresa empresa) {
         this.empresa = empresa;
     }
+    
+    public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
 
     @Override
     public boolean equals(Object o) {

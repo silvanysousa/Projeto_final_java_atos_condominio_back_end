@@ -19,12 +19,12 @@ public class Reserva implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String dataReserva;
-	private Boolean AreaLazer; 
+	private String AreaLazer; 
 	private String tipoDeArea;
 
 	public Reserva(){}
 
-	public Reserva(Long id, String dataReserva, Boolean areaLazer,String tipoDeArea) {
+	public Reserva(Long id, String dataReserva, String areaLazer,String tipoDeArea) {
 		this.id = id;
 		this.dataReserva = dataReserva;
 		AreaLazer = areaLazer;
@@ -55,14 +55,16 @@ public class Reserva implements Serializable {
 		this.dataReserva = dataReserva;
 	}
 
-	public Boolean getAreaLazer() {
+	public String getAreaLazer() {
 		return AreaLazer;
 	}
 
-	public void setAreaLazer(Boolean areaLazer) {
+	public void setAreaLazer(String areaLazer) {
 		AreaLazer = areaLazer;
 	}
 
+	
+	
 	@Override
 	public boolean equals(Object o) {
 		if (this == o) return true;

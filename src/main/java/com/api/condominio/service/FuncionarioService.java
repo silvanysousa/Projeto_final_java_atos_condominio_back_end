@@ -23,7 +23,7 @@ public class FuncionarioService {
         return funcionarioRepository.findAll();
     }
 
-    public Funcionario pegarFuncioarios(Long id){
+    public Funcionario pegarFuncionarios(Long id){
         Optional<Funcionario> f = funcionarioRepository.findById(id);
         Funcionario funcionario = f.orElse(null);
         return funcionario;

@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@CrossOrigin("*")
 @RequestMapping("/funcionario")
 public class FuncionarioController {
-
 
     @Autowired
     private FuncionarioService funcionarioService;
@@ -24,7 +24,7 @@ public class FuncionarioController {
     @GetMapping("/{id}")
     public ResponseEntity<Funcionario> pegarUmfuncioanrio(@PathVariable Long id){
         return ResponseEntity.ok()
-                .body(funcionarioService.pegarFuncioarios(id));
+                .body(funcionarioService.pegarFuncionarios(id));
     }
 
     @PostMapping
