@@ -18,3 +18,7 @@ JWT.
 Documentação Swagger
 
 ![image](https://user-images.githubusercontent.com/104435024/209699163-8d122243-3b05-47db-a84d-0cd9cf3f2b02.png)
+
+Gerando Token com JWT
+
+![image](https://user-images.githubusercontent.com/104435024/209701176-a42f82d7-a24a-4946-8316-c11af4dd8aed.png)
