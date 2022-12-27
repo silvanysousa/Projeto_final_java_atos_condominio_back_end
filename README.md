@@ -14,3 +14,7 @@ JWT.
 ![image](https://user-images.githubusercontent.com/104435024/209683761-e807249e-1922-4b6f-a7fb-2b5ebcf7b159.png)
 ![image](https://user-images.githubusercontent.com/104435024/209683999-b5fee580-ccc9-4df9-b9a0-27eefeb27e3d.png)
 ![image](https://user-images.githubusercontent.com/104435024/209684171-98356363-2c0b-4af5-a88c-ab632240c754.png)
+
+Documentação Swagger
+
+![image](https://user-images.githubusercontent.com/104435024/209699163-8d122243-3b05-47db-a84d-0cd9cf3f2b02.png)
