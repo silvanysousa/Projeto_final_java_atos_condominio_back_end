@@ -1,4 +1,4 @@
-Projeto Fullstack criado durante a Academia Java da empresa Atos em parceria com a Universidade Franciscana - UFN.
+Projeto Fullstack criado durante a Academia Java realizado pela empresa Atos em parceria com a Universidade Franciscana - UFN.
 Principais tecnologias utilizadas:
 Java,
 JavaScript, 
